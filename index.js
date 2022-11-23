@@ -19,9 +19,11 @@ app.use(cors());
 app.use(express.json());
 
 //api
-app.use("/api/auth", require("./routes/auth"));
+app.use('/api/auth', require('./routes/auth'));
+app.use('/api/events', require('./routes/events'));
+
 
 //Escuchar peticiones y el puerto que se abrira
 app.listen(process.env.PORT, () => {
-  console.log(`Servidor corriendo en puert ${process.env.PORT}`);
+  console.log(`Servidor corriendo en puerto ${process.env.PORT}`);
 });
