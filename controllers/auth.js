@@ -47,7 +47,7 @@ const createUser = async (req, res = response) => {
 
 const loginUser = async (req, res = response) => {
   const { email, password } = req.body;
-
+  
   try {
     const user = await User.findOne({ email });
 
@@ -65,7 +65,7 @@ const loginUser = async (req, res = response) => {
       return res.status(400).json({
         ok: false,
         msg: "Contraseña incorrecta",
-      });
+      });    
     }
 
     //Generar JWT
