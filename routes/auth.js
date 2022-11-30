@@ -1,19 +1,21 @@
 /* 
-    Rutas de usuarios / auth
+    Rutas de usuarios / Auth
     host + /api/auth
 */
 
 const { Router } = require("express");
+const router = Router();
+
 const { check } = require("express-validator");
-const { validateField } = require("../middlewares/field-validate");
+const { validateField } = require("../validator/field-validate");
+
 const {
   createUser,
   loginUser,
   revalidateToken,
 } = require("../controllers/auth");
-const { validateJWT } = require("../middlewares/validar-jwt");
 
-const router = Router();
+const { validateJWT } = require("../validator/validar-jwt");
 
 router.post(
   "/register",

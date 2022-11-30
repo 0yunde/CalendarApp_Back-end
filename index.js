@@ -18,7 +18,7 @@ app.use(cors());
 //Lectura y parseo del body
 app.use(express.json());
 
-//api
+//Rutas donde establecere en los endpoints 
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/events', require('./routes/events'));
 
