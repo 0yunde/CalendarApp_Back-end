@@ -91,7 +91,7 @@ const updateEvent = async(req, res = response ) => {
         console.log(error);
         res.status(500).json({
             ok: false,
-            msg: 'Hable con el admin'
+            msg: 'Hable con el administrador'
         })
     }
 }
@@ -127,7 +127,8 @@ const deleteEvent = async(req, res = response ) => {
         await Event.findByIdAndDelete(eventId);
         
         res.json({
-            ok:true
+            ok:true,
+            msg: "Evento eliminado con exito"
         })
 
         
@@ -135,7 +136,7 @@ const deleteEvent = async(req, res = response ) => {
         console.log(error);
         res.status(500).json({
             ok: false,
-            msg: 'Hable con el admin'
+            msg: 'Hable con el administrador'
         })
     }
 }
