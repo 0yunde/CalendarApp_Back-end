@@ -1,5 +1,5 @@
 /* 
-    Rutas de eventos / auth
+    Rutas de eventos / events
     host + /api/events
 */
 const { response } = require('express')

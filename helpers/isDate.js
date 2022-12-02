@@ -1,6 +1,6 @@
 const moment = require('moment');
 
-//funcion para validar fecha
+//validar fecha
 const isDate = (value) => {
 
     //verificar si el value existe, si no existe , retorna false

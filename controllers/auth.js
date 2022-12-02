@@ -1,3 +1,8 @@
+/* 
+    Rutas de usuarios / auth
+    host + /api/usuarios
+*/
+
 const { response } = require("express");
 const bcrypt = require("bcryptjs");
 const User = require("../models/UserModel");
