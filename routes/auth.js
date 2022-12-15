@@ -37,7 +37,7 @@ router.post(
     check("email", "El email es obligatorio").isEmail(),
     check(
       "password",
-      "El password es obligatorio, debe ser de 6 carateres"
+      "El password es obligatorio"
     ).isLength({ min: 6 }),
     validateField,
   ],
