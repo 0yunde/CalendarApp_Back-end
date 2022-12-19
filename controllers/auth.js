@@ -16,8 +16,12 @@ const createUser = async (req, res = response) => {
       });
     }
 
-    //requerir el cuerpo de user
-    user = new User(req.body);
+    //requerir el cuerpo de user ?  realizar array
+    user = new User({
+      name: name,
+      email: email.toLowerCase(),
+      password: password
+    });
 
     //Generar JWT
     const token = await generateJWT(user.id, user.name);
@@ -25,6 +29,8 @@ const createUser = async (req, res = response) => {
     //Encriptar contraseña
     const salt = bcrypt.genSaltSync();
     user.password = bcrypt.hashSync(password, salt);
+    user.email.toLowerCase();
+    console.log(user.email);
 
     //Guardado
     await user.save();
