@@ -36,7 +36,8 @@ app.use('/api/auth', require('./routes/auth'));
 app.use('/api/events', require('./routes/events'));
 
 
-//Para ubicarnos siempre en el index carpeta publica
+//Para ubicarnos siempre en el index carpeta publica en caso de que no
+//este en las rutas establecidas
 app.get('*', (req, res) => {
   res.sendFile(__dirname + '/public/index.html');
 })
