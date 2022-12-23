@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/531e43de-1b7f-4e8c-a6bb-86d6d25bbb42/AppServices/subscriptions/531e43de-1b7f-4e8c-a6bb-86d6d25bbb42/resourceGroups/ACL_Resource/providers/Microsoft.Web/sites/AppCalendarEvec",
+    "appService.deploySubpath": "."
+}

@@ -36,6 +36,12 @@ app.use('/api/auth', require('./routes/auth'));
 app.use('/api/events', require('./routes/events'));
 
 
+//Para ubicarnos siempre en el index carpeta publica
+app.get('*', (req, res) => {
+  res.sendFile(__dirname + '/public/index.html');
+})
+
+
 //Escuchar peticiones y el puerto que se abrira
 app.listen(process.env.PORT, () => {
   console.log(`Servidor corriendo en puerto ${process.env.PORT}`);
